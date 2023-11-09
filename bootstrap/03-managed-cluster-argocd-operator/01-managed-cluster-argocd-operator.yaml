@@ -24,9 +24,9 @@ spec:
           prune: true
           selfHeal: true
       source:
-        repoURL: https://github.com/ignaciolago/rhacm-gitops.git
+        repoURL: https://github.com/anyaegbufrancis/bootstrap-mc-gitops.git
         targetRevision: main
-        path: resources/06-service-mesh-operators
+        path: resources/03-managed-cluster-argocd-operator
       destination:
         server: '{{server}}'
 ---
