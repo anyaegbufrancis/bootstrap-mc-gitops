@@ -7,13 +7,13 @@ metadata:
     argocd.argoproj.io/sync-wave: "0"
   name: open-cluster-management
 ---
-# # Open Cluster Management
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   annotations:
-#     argocd.argoproj.io/sync-wave: "0"
-#   labels:
-#     cluster.open-cluster-management.io/managedCluster: managed-cluster
-#   name: managed-cluster
+# ACM Managed cluster namespace
 
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  labels:
+    cluster.open-cluster-management.io/managedCluster: "managed-cluster"
+  name: managed-cluster
