@@ -7,5 +7,5 @@ resources:
 - 01-acm-operatorgroup.yaml
 - 02-acm-subscription.yaml
 - 03-acm-multiclusterhub.yaml
-- 04-acm-managedcluster.yaml
-- 05-acm-klusterlet.yaml
+# - 04-acm-managedcluster.yaml
+# - 05-acm-klusterlet.yaml
