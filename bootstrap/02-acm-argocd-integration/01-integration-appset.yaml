@@ -19,10 +19,13 @@ spec:
         automated:
           prune: true
           selfHeal: true
+      syncOptions:
+         - CreateNamespace=true
       source:
         repoURL: https://github.com/anyaegbufrancis/bootstrap-mc-gitops.git
         targetRevision: main
         path: resources/02-acm-argocd-integration
       destination:
         server: https://kubernetes.default.svc
+        namespace: open-cluster-management
 
