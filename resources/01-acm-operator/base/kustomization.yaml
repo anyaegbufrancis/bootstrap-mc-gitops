@@ -2,7 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - namespace.yaml
-  - operator-group.yaml
-  - subscription.yaml
-  - multiclusterhub.yaml
+  - 01-acm-namespace.yaml
+  - 02-acm-operatorgroup.yaml
+  - 03-acm-subscription.yaml
+  - 04-acm-multiclusterhub.yaml
+  - 05-acm-managedcluster.yaml
+  - 06-acm-klusterletaddon.yaml
