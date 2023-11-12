@@ -9,7 +9,7 @@ spec:
   generators:
   - list:
       elements: 
-      - name: in-cluster 
+      - name: hub 
   template:
     metadata:
       name: advance-cluster-management-{{name}}
