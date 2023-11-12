@@ -24,7 +24,7 @@ spec:
       source:
         repoURL: https://github.com/anyaegbufrancis/bootstrap-mc-gitops.git
         targetRevision: main
-        path: resources/01-acm-operator
+        path: resources/01-acm-operator/release-2.8
       destination:
         server: 'https://kubernetes.default.svc'
 
