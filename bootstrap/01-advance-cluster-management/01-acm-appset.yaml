@@ -19,6 +19,8 @@ spec:
         automated:
           prune: true
           selfHeal: true
+        syncOptions:
+        - CreateNamespace
       source:
         repoURL: https://github.com/anyaegbufrancis/bootstrap-mc-gitops.git
         targetRevision: main
