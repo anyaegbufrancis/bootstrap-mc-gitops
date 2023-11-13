@@ -1,0 +1,16 @@
+# - op: replace
+#   path: /spec/server/replicas
+#   value: 7
+
+# - op: replace
+#   path: /spec/repo/replicas
+#   value: 7
+apiVersion: argoproj.io/v1beta1
+kind: ArgoCD
+metadata:
+  name: openshift-gitops
+spec:
+   repo:
+      replicas: 7
+   server:
+      replicas: 7

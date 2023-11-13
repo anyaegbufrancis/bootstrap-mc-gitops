@@ -1,0 +1,37 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../base
+  - 00-rbac/gitops-groups.yaml
+  
+
+components:
+  - 01-components/application-controller-cluster-admin
+  - 01-components/edge-termination
+  - 01-components/enable-notifications
+  - 01-components/gitops-admins
+  - 01-components/health-check-odf
+  - 01-components/health-check-olm
+  - 01-components/health-check-openshift-builds
+  - 01-components/kustomize-build-enable-helm
+
+patches: 
+  # - path: 00-rbac/gitops-admins-group.yaml
+
+  - target:
+      kind: Subscription
+      name: openshift-gitops-operator
+    path: 02-channel/patch-channel-1.10.yaml
+
+  - target:
+      kind: ArgoCD
+      name: openshift-gitops
+    path: 03-replicas/patch-replicacount.yaml
+
+  - target:
+      kind: ArgoCD
+      name: openshift-gitops
+    path: 04-consolelink/consolelink-disable.yaml
+
+      

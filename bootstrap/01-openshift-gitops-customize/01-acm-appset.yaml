@@ -1,0 +1,28 @@
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: openshift-gitops-operator
+  namespace: openshift-gitops
+spec:
+  generators:
+  - list:
+      elements: 
+      - name: hub 
+  template:
+    metadata:
+      name: openshift-gitops-{{name}}
+    spec:
+      project: hub-cluster-primer
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+      source:
+        repoURL: https://github.com/anyaegbufrancis/bootstrap-mc-gitops.git
+        targetRevision: main
+        path: resources/01-openshift-gitops-customize/overlays/
+      destination:
+        server: 'https://kubernetes.default.svc'
+

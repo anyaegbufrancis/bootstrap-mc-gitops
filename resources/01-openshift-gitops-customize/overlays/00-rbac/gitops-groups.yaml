@@ -1,0 +1,12 @@
+kind: Group
+apiVersion: user.openshift.io/v1
+metadata:
+  name: PlatformAdmins
+users:
+  - admin
+---
+kind: Group
+apiVersion: user.openshift.io/v1
+metadata:
+  name: PlatformReaders
+users: []

@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1beta1
+kind: ArgoCD
+metadata:
+  name: openshift-gitops
+spec:
+  rbac:
+    policy: |-
+      p, role:platform-team-admin, applications, *, */*, allow
+      p, role:platform-team-admin, *, *, *, allow
+      p, role:platform-readonly, applications, get, */*, allow
+      p, role:platform-readonly, repositories, get, *, allow
+      p, role:platform-readonly, logs, get, *, allow
+      p, role:platform-readonly, projects, get, *, allow
+      p, role:platform-readonly, clusters, get, *, allow
+      p, role:platform-readonly, accounts, get, *, allow
+      p, role:platform-readonly, certificates, get, *, allow
+      p, role:platform-readonly, gpgkeys, get, *, allow
+      g, PlatformAdmins, role:platform-team-admin
+      g, PlatformReaders, role:platform-readonly
+    scopes: '[accounts,groups]'
