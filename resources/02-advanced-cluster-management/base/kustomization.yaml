@@ -12,4 +12,5 @@ resources:
   - 08-acm-installobservability.yaml
   - 09-acm-multiclusterobservability.yaml
   - 10-acm-observabilitynamespace.yaml
+  - 11-acm-managedclusternamespace.yaml
   
