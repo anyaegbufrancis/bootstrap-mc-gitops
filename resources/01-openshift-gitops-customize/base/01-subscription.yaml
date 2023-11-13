@@ -4,6 +4,8 @@ metadata:
   name: openshift-gitops-operator
   namespace: openshift-operators
 spec:
-   name: openshift-gitops-operator
-   source: redhat-operators
-   sourceNamespace: openshift-marketplace
+  channel: latest
+  installPlanApproval: Automatic
+  name: openshift-gitops-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
