@@ -17,18 +17,9 @@ patches:
   # - path: 00-rbac/gitops-admins-group.yaml
 
   - target:
-      kind: Subscription
-      name: openshift-gitops-operator
-    path: 02-channel/patch-channel-latest.yaml
-
-  - target:
       kind: ArgoCD
       name: openshift-gitops
     path: 03-replicas/patch-replicacount.yaml
 
-  - target:
-      kind: ArgoCD
-      name: openshift-gitops
-    path: 04-consolelink/consolelink-disable.yaml
 
       
