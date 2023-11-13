@@ -11,6 +11,6 @@ metadata:
   name: openshift-gitops
 spec:
    repo:
-      replicas: 7
+      replicas: 2
    server:
-      replicas: 7
+      replicas: 2
