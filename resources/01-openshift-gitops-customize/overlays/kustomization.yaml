@@ -11,9 +11,6 @@ components:
   - 01-components/edge-termination
   - 01-components/enable-notifications
   - 01-components/gitops-admins
-  - 01-components/health-check-odf
-  - 01-components/health-check-olm
-  - 01-components/health-check-openshift-builds
   - 01-components/kustomize-build-enable-helm
 
 patches: 
