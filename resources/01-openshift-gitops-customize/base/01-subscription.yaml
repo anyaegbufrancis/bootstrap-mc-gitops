@@ -3,4 +3,6 @@ kind: Subscription
 metadata:
   name: openshift-gitops-operator
   namespace: openshift-operators
-spec: {}
+spec:
+   name: openshift-gitops-operator
+   source: redhat-operators
