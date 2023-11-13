@@ -19,7 +19,7 @@ patches:
   - target:
       kind: Subscription
       name: openshift-gitops-operator
-    path: 02-channel/patch-channel-1.10.yaml
+    path: 02-channel/patch-channel-latest.yaml
 
   - target:
       kind: ArgoCD

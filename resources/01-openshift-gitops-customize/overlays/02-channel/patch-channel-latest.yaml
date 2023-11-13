@@ -4,7 +4,4 @@ metadata:
   name: openshift-gitops-operator
   namespace: openshift-operators
 spec:
-  config:
-    env:
-    - name: DISABLE_DEFAULT_ARGOCD_CONSOLELINK
-      value: 'true'
+  channel: latest
