@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: advance-cluster-management
+  name: hub-cluster-primer
   namespace: openshift-gitops
 spec:
   clusterResourceWhitelist:
