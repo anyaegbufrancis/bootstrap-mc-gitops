@@ -4,4 +4,3 @@ metadata:
   name: openshift-gitops
 spec:
   rbac: {}
-  resourceHealthChecks: {}
