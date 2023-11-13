@@ -6,8 +6,8 @@ resources:
   - 02-acm-operatorgroup.yaml
   - 03-acm-subscription.yaml
   - 04-acm-multiclusterhub.yaml
-  # - 05-acm-managedcluster.yaml
-  # - 06-acm-klusterletaddon.yaml
+  - 05-acm-managedcluster.yaml
+  - 06-acm-klusterletaddon.yaml
   # - 07-acm-observabilitybucket.yaml
   - 08-acm-installobservability.yaml
   - 09-acm-multiclusterobservability.yaml
