@@ -9,19 +9,21 @@ spec:
   - list:
       elements: 
       - name: hub 
+        repo: https://github.com/anyaegbufrancis/bootstrap-mc-gitops.git
+        server: https://kubernetes.default.svc
   template:
     metadata:
       name: openshift-gitops-{{name}}
     spec:
       project: hub-cluster-primer
+      source:
+        repoURL: {{ name }}
+        targetRevision: main
+        path: resources/01-openshift-gitops-customize/overlays/
+      destination:
+        server: {{ server }}      
       syncPolicy:
         automated:
           prune: true
           selfHeal: true
-      source:
-        repoURL: https://github.com/anyaegbufrancis/bootstrap-mc-gitops.git
-        targetRevision: main
-        path: resources/01-openshift-gitops-customize/overlays/
-      destination:
-        server: 'https://kubernetes.default.svc'
 
