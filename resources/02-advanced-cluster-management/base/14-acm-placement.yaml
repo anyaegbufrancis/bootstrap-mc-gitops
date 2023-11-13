@@ -2,14 +2,20 @@
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: gitops-clusters
+  name: hub-cluster-placement
   namespace: openshift-gitops
 spec:
+  clusterSets:
+     - managed-clusters
   predicates:
   - requiredClusterSelector:
       labelSelector:
         matchExpressions:
-        - key: vendor
+        - key: env
           operator: "In"
           values:
-          - OpenShift
+          - hub
+          - sandbox
+          - test
+          - prod
+
