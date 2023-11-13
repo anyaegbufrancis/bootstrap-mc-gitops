@@ -8,9 +8,13 @@ resources:
   - 04-acm-multiclusterhub.yaml
   - 05-acm-managedcluster.yaml
   - 06-acm-klusterletaddon.yaml
-  # - 07-acm-observabilitybucket.yaml
+  - 07-acm-observabilitybucket.yaml
   - 08-acm-installobservability.yaml
   - 09-acm-multiclusterobservability.yaml
   - 10-acm-observabilitynamespace.yaml
   - 11-acm-managedclusternamespace.yaml
+  - 12-acm-managedclusterset.yaml
+  - 13-acm-managedclustersetbinding.yaml
+  - 14-acm-placement.yaml
+  - 15-acm-gitopscluster.yaml
   
