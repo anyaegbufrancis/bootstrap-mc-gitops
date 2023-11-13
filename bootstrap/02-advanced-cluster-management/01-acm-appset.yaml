@@ -14,7 +14,7 @@ spec:
     metadata:
       name: advance-cluster-management-{{name}}
     spec:
-      project: advance-cluster-management
+      project: hub-cluster-primer
       syncPolicy:
         automated:
           prune: true
